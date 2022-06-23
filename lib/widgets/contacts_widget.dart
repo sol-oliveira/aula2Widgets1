@@ -7,15 +7,21 @@ class ContactListTile extends StatelessWidget {
   const ContactListTile({
     Key? key,
     required this.name,
+    required this.index,
   }) : super(key: key);
 
   final String name;
+  final int index;
+  
   @override
   Widget build(BuildContext context) {
+    print(index);
     return CustomListTile(
       title: Row(
         children: [
-          Text(name),
+          Text(
+            name,
+          ),
         ],
       ),
       leading: const [
